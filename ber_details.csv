@@ -1,4 +1,4 @@
-name,eircode,phone,email,ber,construction_year
-Eoin Fennessy,X911234,0860000001,C,1989
-John Smith,A17AB12,0860000002,E,1970
-Mary Ryan,A12B123,0860000003,A,2015
+Eoin Fennessy,X911234,0860000001,eoin@fennessy.com,C,1989
+John Smith,A17AB12,0860000002,john@smith.com,E,1970
+Mary Ryan,A12B123,0860000003,mary@ryan.com,A,2015
+Eoin Fennessy,X911235,0860000004,eoin2@fennessy.com,A,1989
