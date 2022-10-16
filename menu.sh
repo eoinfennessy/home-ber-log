@@ -1,7 +1,5 @@
 #!/bin/bash
 # Author: Eoin Fennessy
-# Description: Offers user options to view all employee records, enter an
-# employee's name to see matching employees' wages, or exit the program.
 
 # Displays all select options in one column
 COLUMNS=0
@@ -11,7 +9,7 @@ select opt in "View All Records" \
               "Search Records" \
               "Remove Record(s)" \
               "Email Householder(s)" \
-              "Exit";do
+              "Exit"; do
   case $opt in
     "View All Records")
       cat ber_details.csv | ./utils/display_records_table.sh
