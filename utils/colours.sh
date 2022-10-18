@@ -1,0 +1,12 @@
+# Reset
+COL_OFF='\033[0m'
+
+COL_HEAD='\033[44m'
+COL_PROMPT='\033[38;05;40m'
+COL_MSG='\033[38;05;5m'
+COL_WARN='\033[38;05;220m'
+COL_ERR='\033[38;05;202m'
+
+# For use with PS3 prompt only
+COL_OFF_PS3=$'\001\e[0m\002'
+COL_PROMPT_PS3=$'\001\e[38;05;42m\002' #77, 79, 10, 42
