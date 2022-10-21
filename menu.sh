@@ -1,14 +1,19 @@
 #!/bin/bash
 # Author: Eoin Fennessy
+# Main menu loop for "Home BER Log", a CLI app for viewing, searching, adding,
+# removing, and sending emails to records from a .csv dataset containing
+# information about householders and their houses, including the householder's
+# name, phone number and email address, and the house's energy rating (BER),
+# address and year of construction.
 
 source ./utils/colours.sh
 
 ./utils/print_logo.sh
-sleep 0.1
+sleep 3
 
 # Displays all select options in one column
 COLUMNS=0
-menu_options=("View All Records" "Add Record" "Search Records"
+menu_options=("View All Records" "Search Records" "Add Record"
               "Remove Record(s)" "Email Householder(s)" "Exit")
 
 while true; do
@@ -20,25 +25,25 @@ while true; do
         "View All Records")
             ./utils/display_records_table.sh < ./ber_details.csv | less
             ;;
-        "Add Record")
-            ./add.sh
-            ;;
         "Search Records")
-            ./search/search_menu.sh
+            ./search/search.sh
+            ;;
+        "Add Record")
+            ./add/add.sh
             ;;
         "Remove Record(s)")
-            ./remove.sh
+            ./remove/remove.sh
             ;;
         "Email Householder(s)")
-            ./Email.sh
+            ./email/email.sh
             ;;
         "Exit")
-            echo "Goodbye!"
-            sleep 0
+            echo -e "${COL_MSG}Goodbye!${COL_OFF}"
+            sleep 1
             exit 0
             ;;
         *) 
-            echo -e "${COL_ERR}${REPLY} is not a valid option${COL_OFF}"
+            echo -e "${COL_ERR}\"${REPLY}\" is not a valid option${COL_OFF}"
             sleep 1.5
             ;;
         esac
