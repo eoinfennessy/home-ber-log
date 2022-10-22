@@ -1,5 +1,7 @@
 # Home BER Log
 
+[Watch a video demonstrating the app and code here](https://youtu.be/NKtaci48cmM)
+
 A CLI Bash app for viewing, searching, adding, and removing records from a CSV dataset that contains information about householders and their houses. Also offers options to email any/all householders.
 
 The dataset includes householders' names, phone numbers and email addresses, as well as each house's energy rating (BER) and year of construction.

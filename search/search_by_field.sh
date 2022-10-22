@@ -4,7 +4,7 @@
 # the field. The column for that field is then searched for an exact match (ignoring
 # case) and the results are stored in the variable "search_results".
 
-source "./utils/get_valid_input.sh"
+source ./utils/get_valid_input.sh
 
 function search_by_field {
     clear

@@ -42,6 +42,7 @@ select opt in "Search by Field" \
     REPLY=""
 done
 
+# Use search results variable set in previous step
 if [[ $search_results ]]; then
     echo "$search_results" | ./utils/display_records_table.sh | less
 else

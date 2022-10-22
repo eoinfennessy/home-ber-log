@@ -43,7 +43,7 @@ function get_valid_email_address {
     read email_address
     # Allow x@x.y where x is any combination of letters, numbers, underscores,
     # dashes or dots, and y is any combination of letters and numbers.
-    # TODO: This could definitely be improved
+    # TODO: This could probably be improved upon
     if [[ ! $email_address =~ ^[[:alnum:]_.-]+@[[:alnum:]_.-]+\.[[:alnum:]]+$ ]]; then
         echo -e "${COL_ERR}$email_address is not a valid email address!${COL_OFF}"
         get_valid_email_address
@@ -68,7 +68,7 @@ function get_valid_year {
     # Allow four numbers starting with "1" or "2"
     if [[ ! $year =~ ^[1-2][0-9]{3}$ ]]; then
         echo -e "${COL_ERR}$year is not a valid year!${COL_OFF}"
-        get_valid_ber
+        get_valid_year
     fi
 }
 
